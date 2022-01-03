@@ -39,6 +39,10 @@ Y computacionalmente:
 
 ![_config.yml]({{ site.baseurl }}/images/6_img.png)
 
-4.Como
+4.Como los datos estan organizados por categoria, lo que se hace ahora es que queden de forma aleatoria y así el modelo no aprendera que la mitad de los datos son de personas llevando lentes y la otra mitad no lleva lentes.
+
+5.Para terminar lo que hacemos es que normalizamos todos los datos excepto la variable de respuesta que ya la tenemos unicamente como 0 y 1.
+
+
 
 
