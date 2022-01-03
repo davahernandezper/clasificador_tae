@@ -15,7 +15,6 @@ Para el modelo los datos fueron basados en
 
 ![_config.yml]({{ site.baseurl }}/images/primer_img.png)
 
-
 2.Luego las imagenes se redimensionan para que queden todas con la misma dimension de pixeles, en este caso usaremos 150px puesto que con esta dimension no perdemos la calidad de las imagenes:
 
 ![_config.yml]({{ site.baseurl }}/images/segunda_img.png)
@@ -39,7 +38,6 @@ Computacionalmente lo datos de la imagen anterior se veran como sigue, recordand
 Y computacionalmente:
 
 ![_config.yml]({{ site.baseurl }}/images/6_img.png)
-
 
 4.Como
 
