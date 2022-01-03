@@ -19,10 +19,21 @@ Luego las imagenes se redimensionan para que queden todas con la misma dimension
 
 ![_config.yml]({{ site.baseurl }}/images/segunda_img.png)
 
-Una vez se tienen las imagenes procesadas con la escala de grises y con el tamaño de 150px por 150px, los imagenes se veran de la siguiente manera, recordando que es una composicion de pixeles que van de 0 a 255:
+Una vez se tienen las imagenes procesadas con la escala de grises y con el tamaño de 150px por 150px, los imagenes se veran de la siguiente manera:
+
+#### Para alguien con lentes:
+![_config.yml]({{ site.baseurl }}/images/tercer_img.png)
+
+Pero computacionalmente lo datos de la imagen anterior se veran como sigue, recordando que es una composicion de pixeles que van de 0 a 255:
+![_config.yml]({{ site.baseurl }}/images/cuarta_img.png)
+
+#### Para alguien sin lentes:
+![_config.yml]({{ site.baseurl }}/images/5_img.png)
+
+Y computacionalmente:
+![_config.yml]({{ site.baseurl }}/images/6_img.png)
 
 
-![_config.yml]({{ site.baseurl }}/images/tercer_img.png)![_config.yml]({{ site.baseurl }}/images/cuarta_img.png)
 
 
 
