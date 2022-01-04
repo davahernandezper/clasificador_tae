@@ -73,8 +73,3 @@ Este modelo tiene tres pares de capas convolucionales los cuales pasaran por 32,
 
 
 ### Grafico de precisión y perdida:
-
-
-
-
-
