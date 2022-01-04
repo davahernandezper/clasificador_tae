@@ -73,10 +73,21 @@ Este modelo tiene tres pares de capas convolucionales los cuales pasaran por 32,
 
 
 ### Grafico de precisión y perdida:
-1.Modelo denso: Podemos observar en la precisión que los datos de entrenamiento están creciendo demasiado rápido y llegando al valor 1, lo cual indica que este modelo no es capaz de generalizar y que se aprende los datos de memoria, esto se comprueba con la precisión de los datos de entrenamiento que en lugar de crecer antes están con tendencia hacia el 0.
+Para cada uno de los modelos anteriores podemos observar en la precisión que los datos de entrenamiento están creciendo demasiado rápido y llegando al valor 1, lo cual indica que estos modelos no son capaces de generalizar y que se aprenden los datos de memoria, esto se comprueba con la precisión de los datos de validación que en lugar de crecer antes están con tendencia hacia el 0.
 
-Al mirar el grafico de loss podemos observar que los datos de validación están creciendo el lugar de tener una tendencia hacia el cero, esto último nos comprueba que este modelo no es capaz de generalizar y por lo tanto no es útil en este ejercicio.
+Al mirar los gráficos de loss podemos observar que los datos de validación están creciendo en lugar de tener una tendencia hacia el cero, esto último nos comprueba que estos modelos no son capaces de generalizar y por lo tanto no son útiles en este ejercicio. Esto a pesar de que los datos de validación 'mejoraron' para los modelos convolucionales.
+
+- Modelo denso
 
 ![_config.yml]({{ site.baseurl }}/images/denso.png)
+
+- Modelo convolucional:
+
+![_config.yml]({{ site.baseurl }}/images/cnn.png)
+
+- Modelo convolucional 2:
+
+![_config.yml]({{ site.baseurl }}/images/cnn2.png)
+
 
 
