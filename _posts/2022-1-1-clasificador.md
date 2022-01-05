@@ -90,4 +90,14 @@ Al mirar los gráficos de loss podemos observar que los datos de validación est
 ![_config.yml]({{ site.baseurl }}/images/cnn2.png)
 
 
+## Modelos con datos aumentados
 
+Ahora se proponen los mismos tres modelos pero esta vez con datos aumentados, esto significa que se le realizaran modificaciones a las imagenes, tales como rotaciones, inclidaciones, acercamientos, entre otras. Para ellos usamos el siguiente codigo:
+
+![_config.yml]({{ site.baseurl }}/images/13_img.png)
+
+![_config.yml]({{ site.baseurl }}/images/14_img.png)
+
+las imagenes del conjunto de entrenamiento se verán como sigue:
+
+![_config.yml]({{ site.baseurl }}/images/15_img.png)
