@@ -121,7 +121,3 @@ Para estos modelos se usaron las mismas reglas que los modelos anteriores y el u
 - Modelo convolucional 2 con datos aumentados:
 
 ![_config.yml]({{ site.baseurl }}/images/cnn2_AD.png)
-
-
-
-
