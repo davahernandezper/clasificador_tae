@@ -92,7 +92,7 @@ Al mirar los gráficos de loss podemos observar que los datos de validación est
 
 ## Modelos con datos aumentados
 
-Ahora se proponen los mismos tres modelos pero esta vez con datos aumentados, esto significa que se le realizaran modificaciones a las imagenes del conjunto de entrenamiento, tales como: rotaciones, inclidaciones, acercamientos,desplazamientos verticales y desplazamientos horizontales. Para esto usamos el siguiente codigo:
+Ahora se proponen los mismos tres modelos, pero esta vez con datos aumentados, esto significa que se le realizaran modificaciones a las imágenes del conjunto de entrenamiento, tales como: rotaciones, inclinaciones, acercamientos, desplazamientos verticales y desplazamientos horizontales. Para esto usamos el siguiente código:
 
 ![_config.yml]({{ site.baseurl }}/images/13_img.png)
 
@@ -107,7 +107,7 @@ y quedaran de la siguiente manera:
 ![_config.yml]({{ site.baseurl }}/images/16_img.png)
 
 
-Para estos modelos se usaron las mismas reglas que los modelos anteriores y el unico cambio fue que se realizaron las modificaciones ya mencionadas sobre el conjunto de entrenamiento, los resultados obtenido son los siguientes:
+Para estos modelos se usaron las mismas reglas que los modelos anteriores y el único cambio fue que se realizaron las modificaciones ya mencionadas sobre el conjunto de entrenamiento, los resultados obtenidos son los siguientes:
 
 
 - Modelo denso con datos aumentados:
@@ -121,3 +121,12 @@ Para estos modelos se usaron las mismas reglas que los modelos anteriores y el u
 - Modelo convolucional 2 con datos aumentados:
 
 ![_config.yml]({{ site.baseurl }}/images/cnn2_AD.png)
+
+Observando los gráficos anteriores podemos ver que el modelo denso continua siendo el menos indicado para el clasificador de imágenes dado que no es capaz de generalizar y con el aumento de datos pareciera que hasta en el conjunto de entrenamiento tiene dificultades para el aprendizaje. En cambio, en los modelos convolucionales si se obtienen resultados interesantes, ahora si se observa que la precisión de los conjuntos de validación está creciendo y que la perdida está bajando, aun así, no lo hacen de la misma manera que lo que el conjunto de entrenamiento y posiblemente esto se pueda mejorar.
+
+
+## Modelos con datos aumentados, pero con muestra de validación diferente
+
+Ahora se usa una técnica diferente, es posible que los resultados anteriores se deba a que el conjunto de validación usado es demasiado diferente al conjunto de entrenamiento que se usa, por ejemplo, el conjunto de entrenamiento solo tiene una fotografía para cada persona mientras que el conjunto de validación tiene diferentes tomas de la misma persona en diferentes ángulos o con diferentes lentes, es probable que esto este confundiendo al modelo y por eso su dificultad al generalizar, por lo que se opta por usar el 20% de los datos de entrenamiento como conjunto de validación:
+
+
