@@ -92,12 +92,36 @@ Al mirar los gráficos de loss podemos observar que los datos de validación est
 
 ## Modelos con datos aumentados
 
-Ahora se proponen los mismos tres modelos pero esta vez con datos aumentados, esto significa que se le realizaran modificaciones a las imagenes, tales como rotaciones, inclidaciones, acercamientos, entre otras. Para ellos usamos el siguiente codigo:
+Ahora se proponen los mismos tres modelos pero esta vez con datos aumentados, esto significa que se le realizaran modificaciones a las imagenes del conjunto de entrenamiento, tales como: rotaciones, inclidaciones, acercamientos,desplazamientos verticales y desplazamientos horizontales. Para esto usamos el siguiente codigo:
 
 ![_config.yml]({{ site.baseurl }}/images/13_img.png)
 
 ![_config.yml]({{ site.baseurl }}/images/14_img.png)
 
-las imagenes del conjunto de entrenamiento se verán como sigue:
+las imagenes del conjunto de entrenamiento se ven como sigue:
 
 ![_config.yml]({{ site.baseurl }}/images/15_img.png)
+
+y quedaran de la siguiente manera:
+
+![_config.yml]({{ site.baseurl }}/images/16_img.png)
+
+
+Para estos modelos se usaron las mismas reglas que los modelos anteriores y el unico cambio fue que se realizaron las modificaciones ya mencionadas sobre el conjunto de entrenamiento, los resultados obtenido son los siguientes:
+
+
+- Modelo denso con datos aumentados:
+
+![_config.yml]({{ site.baseurl }}/images/denso_AD.png)
+
+- Modelo convolucional con datos aumentados:
+
+![_config.yml]({{ site.baseurl }}/images/cnn_AD.png)
+
+- Modelo convolucional 2 con datos aumentados:
+
+![_config.yml]({{ site.baseurl }}/images/cnn2_AD.png)
+
+
+
+
