@@ -14,9 +14,8 @@ Para el modelo los datos fueron basados en
 1.Se cargan las imágenes con una escala de colores gris, puesto que así necesitamos un poco menos de máquina para el procesamiento de los datos, las imágenes inicialmente quedan de la siguiente manera:
 
 
-> We loved with a love that was more than love
 
-
+_Figura 1._
 ![_config.yml]({{ site.baseurl }}/images/primer_img.png)
 
 2.Luego las imágenes se redimensionan para que queden todas con la misma dimensión de pixeles, en este caso usaremos 150px puesto que con esta dimensión no perdemos la calidad de las imágenes:
