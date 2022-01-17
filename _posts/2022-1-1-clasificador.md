@@ -13,6 +13,10 @@ Para el modelo los datos fueron basados en
 ## Tratamiento de los datos
 1.Se cargan las imágenes con una escala de colores gris, puesto que así necesitamos un poco menos de máquina para el procesamiento de los datos, las imágenes inicialmente quedan de la siguiente manera:
 
+
+> We loved with a love that was more than love
+
+
 ![_config.yml]({{ site.baseurl }}/images/primer_img.png)
 
 2.Luego las imágenes se redimensionan para que queden todas con la misma dimensión de pixeles, en este caso usaremos 150px puesto que con esta dimensión no perdemos la calidad de las imágenes:
@@ -128,5 +132,3 @@ Observando los gráficos anteriores podemos ver que el modelo denso continua sie
 ## Modelos con datos aumentados, pero con muestra de validación diferente
 
 Ahora se usa una técnica diferente, es posible que los resultados anteriores se deba a que el conjunto de validación usado es demasiado diferente al conjunto de entrenamiento que se usa, por ejemplo, el conjunto de entrenamiento solo tiene una fotografía para cada persona mientras que el conjunto de validación tiene diferentes tomas de la misma persona en diferentes ángulos o con diferentes lentes, es probable que esto este confundiendo al modelo y por eso su dificultad al generalizar, por lo que se opta por usar el 20% de los datos de entrenamiento como conjunto de validación:
-
-
