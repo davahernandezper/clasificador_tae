@@ -15,8 +15,8 @@ Para el modelo los datos fueron basados en
 
 > _Figura 1_
 
-figura1!
-[_config.yml]({{ site.baseurl }}/images/primer_img.png)
+figura1
+![_config.yml]({{ site.baseurl }}/images/primer_img.png)
 
 2.Luego las imágenes se redimensionan para que queden todas con la misma dimensión de pixeles, en este caso usaremos 150px puesto que con esta dimensión no perdemos la calidad de las imágenes:
 
