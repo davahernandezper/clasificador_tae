@@ -4,43 +4,32 @@ title: Clasificador
 published: true
 ---
 ## Introducción
-Este es un trabajo para el curso de aprendizaje estadístico de la universidad Nacional de Colombia sede Medellín, cuyo objetivo es solucionar el problema de clasificar imágenes utilizando técnicas de aprendizaje estadístico. En el campo de clasificación de imágenes muchas veces es necesario identificar si la persona lleva apuestos lentes o si no los lleva, las aplicaciones que tiene lograr un modelo de estos son inmensas tales como: mecanismos de autenticación en servicios de pagos online, procesos de inicio de sesión, validación de métodos de pago, entre muchas otras.
+Este es un trabajo para el curso de aprendizaje estadístico de la universidad Nacional de Colombia sede Medellín, cuyo objetivo es solucionar el problema de clasificar imágenes utilizando técnicas de aprendizaje estadístico. En el campo de clasificación de imágenes muchas veces es necesario identificar si la persona lleva puestos lentes o si no los lleva, las aplicaciones de estos modelos son de gran importancia,algunos ejemplos son: mecanismos de autenticación en servicios de pagos online, procesos de inicio de sesión, validación de métodos de pago, entre muchas otras.
 
 ## Dataset
 Para el modelo los datos fueron basados en 
 [https://www.kaggle.com/jorgebuenoperez/datacleaningglassesnoglasses?select=Images](https://www.kaggle.com/jorgebuenoperez/datacleaningglassesnoglasses?select=Images), que a su vez están basados en [https://www.kaggle.com/jeffheaton/glasses-or-no-glasses](https://www.kaggle.com/jeffheaton/glasses-or-no-glasses). Inicialmente los datos ya estaban organizados y separados por el tipo de imagen, que era si la persona lleva o no lleva lentes puestos.
 
 ## Tratamiento de los datos
-1.Se cargan las imágenes con una escala de colores gris, puesto que así necesitamos un poco menos de máquina para el procesamiento de los datos, las imágenes inicialmente quedan de la siguiente manera:
+1.Se cargan las imágenes con una escala de colores gris, puesto que así necesitamos un poco menos de máquina para el procesamiento de los datos, las imágenes inicialmente quedan como muestra la figura 1:
 
-> _Figura 1_
-
-figura1
-![_config.yml]({{ site.baseurl }}/images/primer_img.png)
+![_config.yml]({{ site.baseurl }}/images/primer_img.jpeg)
 
 2.Luego las imágenes se redimensionan para que queden todas con la misma dimensión de pixeles, en este caso usaremos 150px puesto que con esta dimensión no perdemos la calidad de las imágenes:
 
-![_config.yml]({{ site.baseurl }}/images/segunda_img.png)
+![_config.yml]({{ site.baseurl }}/images/segunda_img.jpeg)
 
 3.Una vez se tienen las imágenes procesadas con la escala de grises y con el tamaño de 150px por 150px, las imágenes se verán de la siguiente manera:
 
-- Para alguien con lentes:
+- Para alguien con lentes veremos los datos como muestra la figura 3:
 
-![_config.yml]({{ site.baseurl }}/images/tercer_img.png)
-
-Computacionalmente lo datos de la imagen anterior se verán como sigue, recordando que es una composición de pixeles que van de 0 a 255:
-
-![_config.yml]({{ site.baseurl }}/images/cuarta_img.png)
+![_config.yml]({{ site.baseurl }}/images/tercer_img.jpeg)
 
 
-- Para alguien sin lentes:
+- La figura 2 muestra como se verán los datos para las imagenes de personas sin lentes:
 
-![_config.yml]({{ site.baseurl }}/images/5_img.png)
+![_config.yml]({{ site.baseurl }}/images/5_img.jpeg)
 
-
-Y computacionalmente:
-
-![_config.yml]({{ site.baseurl }}/images/6_img.png)
 
 4.Como los datos están organizados por categoría, lo que se hace ahora es que queden de forma aleatoria y así el modelo no aprenderá que la mitad de los datos son de personas llevando lentes y la otra mitad no lleva lentes.
 
