@@ -103,7 +103,7 @@ De esta manera el modelo seleccionado es el convolucional con datos aumentados p
 
 -Foro de GitHub. (2016, 3 octubre). flow_from_directory seems to find no images · Issue #3946 · keras-team/keras. GitHub. Recuperado 24 de diciembre de 2021, de [https://github.com/keras-team/keras/issues/3946](https://github.com/keras-team/keras/issues/3946).
 
--Chaturvedi, S. (2019, 5 junio). Research gate. Research gate. Recuperado 1 de enero de 2022, de [https://www.researchgate.net/post/When_can_Validation_Accuracy_be_greater_than_Training_Accuracy_for_Deep_Learning_Models](https://www.researchgate.net/post)
+-Chaturvedi, S. (2019, 5 junio). Research gate. Research gate. Recuperado 1 de enero de 2022, de [https://www.researchgate.net/post](https://www.researchgate.net/post/When_can_Validation_Accuracy_be_greater_than_Training_Accuracy_for_Deep_Learning_Models)
 
 -Zhang, K. (2020, 26 julio). Redes-Neuronales. GitHub. Recuperado 2 de enero de 2022, de [https://github.com/Codificados/Redes-Neuronales/blob/master/GenerarDatos.py](https://github.com/Codificados/Redes-Neuronales/blob/master/GenerarDatos.py).
 
