@@ -30,15 +30,8 @@ Para el modelo, los datos fueron obtenidos de un problema existente en kaggle (B
 ![_config.yml]({{ site.baseurl }}/images/cuarta_img.jpeg)
 
 
-4.Como los datos están organizados por categoría, lo que se hace ahora es que queden de forma aleatoria y así el modelo no aprenderá que la mitad de los datos son de personas llevando lentes y la otra mitad no lleva lentes.
-
-![_config.yml]({{ site.baseurl }}/images/7_img.png)
-
-5.Para terminar lo que hacemos es que normalizamos todos los datos excepto la variable de respuesta que ya la tenemos únicamente como 0 y 1.
-
-![_config.yml]({{ site.baseurl }}/images/8_img.png)
-
-![_config.yml]({{ site.baseurl }}/images/9_img.png)
+4.Como los datos están organizados por categoría se mezcla de forma aleatoria para así, evitar introducir al modelo cualquier patron de comportamiento.
+Para terminar,se normalizan todos los datos excepto la variable de respuesta que toma valores únicamente de 0 y 1.
 
 
 ## Modelos sin datos aumentados
