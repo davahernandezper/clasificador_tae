@@ -71,22 +71,19 @@ y quedaran de la siguiente manera:
 ![_config.yml]({{ site.baseurl }}/images/16_img.png)
 
 
-Para estos modelos se usaron las mismas reglas que los modelos anteriores y el único cambio fue que se realizaron las modificaciones ya mencionadas sobre el conjunto de entrenamiento, los resultados obtenidos son los siguientes:
+Para estos modelos se usaron las mismas reglas que los anteriores y el único cambio fue que se realizaron las modificaciones ya mencionadas sobre el conjunto de entrenamiento.
+
+En la grafica 3 se puede observar que el modelo denso no tiene una mejora en la precisión ni en la perdida, ambas muestran una tendencia constante. En la precisión se puede observar una disminucion en el desempeño del conjunto de entrenamiento.
+
+El comportamiento deseado se obtiene con el modelo convolucional en la grafica 4, donde se tiene que la precision de ambos conjuntos esta creciendo a la par y la perdida esta tendiendo a cero.
 
 
-- Modelo denso con datos aumentados:
+![_config.yml]({{ site.baseurl }}/images/grafico_3.jpeg)
 
-![_config.yml]({{ site.baseurl }}/images/denso_AD.png)
 
-- Modelo convolucional con datos aumentados:
+![_config.yml]({{ site.baseurl }}/images/grafico_4.jpeg)
 
-![_config.yml]({{ site.baseurl }}/images/cnn_AD.png)
 
-- Modelo convolucional 2 con datos aumentados:
-
-![_config.yml]({{ site.baseurl }}/images/cnn2_AD.png)
-
-Observando los gráficos anteriores podemos ver que el modelo denso continua siendo el menos indicado para el clasificador de imágenes dado que no es capaz de generalizar y con el aumento de datos pareciera que hasta en el conjunto de entrenamiento tiene dificultades para el aprendizaje. En cambio, en los modelos convolucionales si se obtienen resultados interesantes, ahora si se observa que la precisión de los conjuntos de validación está creciendo y que la perdida está bajando, aun así, no lo hacen de la misma manera que lo que el conjunto de entrenamiento y posiblemente esto se pueda mejorar.
 
 
 ## Modelos con datos aumentados, pero con muestra de validación diferente
