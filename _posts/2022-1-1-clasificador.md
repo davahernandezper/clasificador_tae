@@ -4,7 +4,7 @@ title: Clasificador
 published: true
 ---
 ## Introducción
-Este es un trabajo para el curso de aprendizaje estadístico de la universidad Nacional de Colombia sede Medellín, cuyo objetivo es solucionar el problema de clasificar imágenes utilizando técnicas de aprendizaje estadístico. En el campo de clasificación de imágenes muchas veces es necesario identificar si la persona lleva puestos lentes o si no los lleva, las aplicaciones de estos modelos son de gran importancia,algunos ejemplos son: mecanismos de autenticación en servicios de pagos online, procesos de inicio de sesión, validación de métodos de pago, entre muchas otras.
+Este es un trabajo para el curso de aprendizaje estadístico de la universidad Nacional de Colombia sede Medellín, cuyo objetivo es solucionar el problema de clasificar imágenes utilizando técnicas de aprendizaje estadístico. En el campo de clasificación de imágenes muchas veces es necesario identificar si la persona lleva puestos lentes o si no los lleva, las aplicaciones de estos modelos son de gran importancia, algunos ejemplos son: mecanismos de autenticación en servicios de pagos online, procesos de inicio de sesión, validación de métodos de pago, entre muchas otras.
 
 ## Dataset
 Para el modelo, los datos fueron obtenidos de un problema existente en kaggle (Bueno, 2021). Los datos ya estaban organizados y separados por el tipo de imagen definiendo dos grupos, si la persona lleva o no lentes puestos. Estos datos son una profundización de un problema generado por (Heaton, 2020).
@@ -25,13 +25,14 @@ Para el modelo, los datos fueron obtenidos de un problema existente en kaggle (B
 ![_config.yml]({{ site.baseurl }}/images/tercer_img.jpeg)
 
 
-- La figura 2 muestra como se verán los datos para las imagenes de personas sin lentes:
+- La figura 2 muestra cómo se verán los datos para las imágenes de personas sin lentes:
 
 ![_config.yml]({{ site.baseurl }}/images/cuarta_img.jpeg)
 
 
-4.Como los datos están organizados por categoría se mezcla de forma aleatoria para así, evitar introducir al modelo cualquier patron de comportamiento.
-Para terminar,se normalizan todos los datos excepto la variable de respuesta que toma valores únicamente de 0 y 1.
+4.Como los datos están organizados por categoría se mezcla de forma aleatoria para así, evitar introducir al modelo cualquier patrón de comportamiento.
+Para terminar, se normalizan todos los datos excepto la variable de respuesta que toma valores únicamente de 0 y 1.
+
 
 
 ## Modelos sin datos aumentados
@@ -39,30 +40,29 @@ Para terminar,se normalizan todos los datos excepto la variable de respuesta que
 Inicialmente se proponen tres modelos y como es un problema de clasificación de imágenes el mejor método a usar son las redes neuronales convolucionales. Para iniciar haremos tres modelos sin datos aumentados de los cuales 1 es un modelo denso y los otros dos son modelos convolucionales:
 
 ### Modelo denso:
-Este modelo tiene una capa de entrada que recibe los 22.500 pixeles, luego tiene dos capas densas con 200 neuronas cada una y finalmente la capa de salida, esta última capa debido al problema donde el resultado es si la personas lleva o no lleva lentes puestos tendrá únicamente una neurona de salida y usaremos la función sigmoid. Se usa esta función dado que sus valores de respuesta estan siempre entre 0 y 1.
+Este modelo tiene una capa de entrada que recibe los 22.500 pixeles, luego tiene dos capas densas con 200 neuronas cada una y finalmente la capa de salida, esta última capa debido al problema donde el resultado es si la personas lleva o no lleva lentes puestos tendrá únicamente una neurona de salida y usaremos la función Sigmoid. Se usa esta función dado que sus valores de respuesta están siempre entre 0 y 1.
 
 ### Modelo convolucional:
 Este modelo tiene tres pares de capas convolucionales los cuales pasaran por 32, 64 y 128 filtros, luego tendrá una capa densa con 150 neuronas y finalmente la capa de salida que cumple con las mismas condiciones que para el modelo denso.
 
 
-
 ### Gráfico de precisión y perdida:
-En la gráfica 1 para el modelo denso y en la grafica 2 para el modelo convolucional, podemos observar que la precision para ambos conjuntos es creciente con cada paso de la red. En la grafica 1 para el modelo denso podemos observar un comportamiento fluctuante tanto en presicion como en perdida, en la precision luego del paso 70 se alcanza el valor de 1 para el conjunto de entrenamiento lo que podria indicar un sobreajuste.
+En la gráfica 1 para el modelo denso y en la gráfica 2 para el modelo convolucional, podemos observar que la precisión para ambos conjuntos es creciente con cada paso de la red. En la gráfica 1 para el modelo denso podemos observar un comportamiento fluctuante tanto en precisión como en perdida, en la precisión luego del paso 70 se alcanza el valor de 1 para el conjunto de entrenamiento lo que podría indicar un sobreajuste.
 
-Para el modelo convolusional en la grafica 2, se alcanza identificar que la precision es igual a 1 en muy pocos pasos, lo que podria indicar que la red se esta aprendiendo los datos de memoria y que por ello es que necesita menos pasos para su aprendizaje, tambien, lo podemos confirmar con la perdida dado que para el conjunto de entrenamiento el error tiende a cero a medida que la red da mas pasos pero, el error del conjunto de validacion empieza a ser creciente luego de los 40 pasos.
+Para el modelo convolucional en la gráfica 2, se alcanza identificar que la precisión es igual a 1 en muy pocos pasos, lo que podría indicar que la red se está aprendiendo los datos de memoria y que por ello es que necesita menos pasos para su aprendizaje, también, lo podemos confirmar con la perdida dado que para el conjunto de entrenamiento el error tiende a cero a medida que la red da más pasos pero, el error del conjunto de validación empieza a ser creciente luego de los 40 pasos.
 
 ![_config.yml]({{ site.baseurl }}/images/grafico_1.jpeg)
-
 
 ![_config.yml]({{ site.baseurl }}/images/grafico_2.jpeg)
 
 
 
+
 ## Modelos con datos aumentados
 
-Ahora se proponen los mismos dos modelos, pero esta vez con datos aumentados, esto significa que se le realizaran modificaciones a las imágenes del conjunto de entrenamiento, tales como: rotaciones, inclinaciones, acercamientos, desplazamientos verticales y desplazamientos horizontales. 
+Ahora se proponen los mismos dos modelos, pero esta vez con datos aumentados, esto significa que se les realizaran modificaciones a las imágenes del conjunto de entrenamiento, tales como: rotaciones, inclinaciones, acercamientos, desplazamientos verticales y desplazamientos horizontales. 
 
-las imagenes del conjunto de entrenamiento se ven como sigue:
+las imágenes del conjunto de entrenamiento se ven como sigue:
 
 ![_config.yml]({{ site.baseurl }}/images/15_img.png)
 
@@ -73,9 +73,9 @@ y quedaran de la siguiente manera:
 
 Para estos modelos se usaron las mismas reglas que los anteriores y el único cambio fue que se realizaron las modificaciones ya mencionadas sobre el conjunto de entrenamiento.
 
-En la grafica 3 se puede observar que el modelo denso no tiene una mejora en la precisión ni en la perdida, ambas muestran una tendencia constante. En la precisión se puede observar una disminucion en el desempeño del conjunto de entrenamiento.
+En la gráfica 3 se puede observar que el modelo denso no tiene una mejora en la precisión ni en la perdida, ambas muestran una tendencia constante. En la precisión se puede observar una disminución en el desempeño del conjunto de entrenamiento.
 
-El comportamiento deseado se obtiene con el modelo convolucional en la grafica 4, donde se tiene que la precision de ambos conjuntos esta creciendo a la par y la perdida esta tendiendo a cero.
+El comportamiento deseado se obtiene con el modelo convolucional en la gráfica 4, donde se tiene que la precisión de ambos conjuntos está creciendo a la par y la perdida está tendiendo a cero.
 
 
 ![_config.yml]({{ site.baseurl }}/images/grafico_3.jpeg)
@@ -85,17 +85,20 @@ El comportamiento deseado se obtiene con el modelo convolucional en la grafica 4
 
 
 
-## Resultado conjunto de validacion [CMU Face Images Data Set](http://archive.ics.uci.edu/ml/datasets/cmu+face+images)
 
-Teniendo en cuenta los resultados anteriores, se decide evaluar el desempeño de los dos con mejor precisión y menor pérdida, estos son el modelo  denso sin datos aumentados y el modelo convolucional con datos aumentados, teniendo en cuenta el conjunto de imágenes compartidas para realizar la evaluacion del modelo (siendo este un conjunto de validación aparte del de prueba) 
+## Resultado conjunto de validación [CMU Face Images Data Set](http://archive.ics.uci.edu/ml/datasets/cmu+face+images)
+
+Teniendo en cuenta los resultados anteriores, se decide evaluar el desempeño de los dos con mejor precisión y menor pérdida, estos son el modelo denso sin datos aumentados y el modelo convolucional con datos aumentados, teniendo en cuenta el conjunto de imágenes compartidas para realizar la evaluación del modelo (siendo este un conjunto de validación aparte del de prueba) 
 Los resultados se muestran a continuación: 
 
-- El modelo denso presento una precision del 37%.
-- El modelo convolucional con datos aumentos presenta una precision del 78%.
+- El modelo denso presento una precisión del 37%.
+- El modelo convolucional con datos aumentos presenta una precisión del 78%.
 
-De esta manera el modelo seleccionado es el convolucional con datos aumentados pues este presenta un mejor desempeño en el conjunto de validación. De igual manera, en el mundo del reconocimiento facial un 22% puede hacer gran diferencia en procesos de seguridad de la información. La perdida de precision puede deberse a que en el conjunto de validacion (a diferencia del conjunto de entrenamiento y prueba) las imagenes no deben tener una reduccion de dimensiones sino que mas bien deben ser aumentadas. Otra gran diferencia es que el conjunto de validacion ya viene en una escala de grises, mientras que el conjunto de entrenamiento debe ser transformado en su escala de colores a gris.
+De esta manera el modelo seleccionado es el convolucional con datos aumentados pues este presenta un mejor desempeño en el conjunto de validación. De igual manera, en el mundo del reconocimiento facial un 22% puede hacer gran diferencia en procesos de seguridad de la información. La pérdida de precisión puede deberse a que en el conjunto de validación (a diferencia del conjunto de entrenamiento y prueba) las imágenes no deben tener una reducción de dimensiones, sino que más bien deben ser aumentadas. Otra gran diferencia es que el conjunto de validación ya viene en una escala de grises, mientras que el conjunto de entrenamiento debe ser transformado en su escala de colores a gris.
 
-##Bibliografia
+
+
+## Bibliografía
 
 -Bueno, J. (2021, enero). data-cleaning-glasses-no-glasses. Kaggle. Recuperado 25 de diciembre de 2021, de [https://www.kaggle.com/jorgebuenoperez/datacleaningglassesnoglasses?select=Images](https://www.kaggle.com/jorgebuenoperez/datacleaningglassesnoglasses?select=Images).
 
