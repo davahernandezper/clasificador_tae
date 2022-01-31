@@ -7,8 +7,7 @@ published: true
 Este es un trabajo para el curso de aprendizaje estadístico de la universidad Nacional de Colombia sede Medellín, cuyo objetivo es solucionar el problema de clasificar imágenes utilizando técnicas de aprendizaje estadístico. En el campo de clasificación de imágenes muchas veces es necesario identificar si la persona lleva puestos lentes o si no los lleva, las aplicaciones de estos modelos son de gran importancia,algunos ejemplos son: mecanismos de autenticación en servicios de pagos online, procesos de inicio de sesión, validación de métodos de pago, entre muchas otras.
 
 ## Dataset
-Para el modelo los datos fueron basados en 
-[https://www.kaggle.com/jorgebuenoperez/datacleaningglassesnoglasses?select=Images](https://www.kaggle.com/jorgebuenoperez/datacleaningglassesnoglasses?select=Images), que a su vez están basados en [https://www.kaggle.com/jeffheaton/glasses-or-no-glasses](https://www.kaggle.com/jeffheaton/glasses-or-no-glasses). Inicialmente los datos ya estaban organizados y separados por el tipo de imagen, que era si la persona lleva o no lleva lentes puestos.
+Para el modelo, los datos fueron obtenidos de un problema existente en kaggle (Bueno, 2021). Los datos ya estaban organizados y separados por el tipo de imagen definiendo dos grupos, si la persona lleva o no lentes puestos. Estos datos son una profundización de un problema generado por (Heaton, 2020).
 
 ## Tratamiento de los datos
 1.Se cargan las imágenes con una escala de colores gris, puesto que así necesitamos un poco menos de máquina para el procesamiento de los datos, las imágenes inicialmente quedan como muestra la figura 1:
@@ -28,7 +27,7 @@ Para el modelo los datos fueron basados en
 
 - La figura 2 muestra como se verán los datos para las imagenes de personas sin lentes:
 
-![_config.yml]({{ site.baseurl }}/images/5_img.jpeg)
+![_config.yml]({{ site.baseurl }}/images/cuarta_img.jpeg)
 
 
 4.Como los datos están organizados por categoría, lo que se hace ahora es que queden de forma aleatoria y así el modelo no aprenderá que la mitad de los datos son de personas llevando lentes y la otra mitad no lleva lentes.
