@@ -4,12 +4,18 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Este trabajo fue realizado por tres estudiantes de estadística de la Universidad Nacional de Colombia - Sede Medellín
 
-### More Information
+Marisol Gonzalez Madrid
 
-A place to include any other types of information that you'd like to include about yourself.
+David Alejandro Hernandez Perez
 
-### Contact me
+Valentina Lopez Montoya
 
-[email@domain.com](mailto:email@domain.com)
+### Contact us
+
+[mgonzalezmad@unal.edu.co](mgonzalezmad@unal.edu.co)
+
+[davahernandezper@unal.edu.co](davahernandezper@unal.edu.co)
+
+[valopezmo@unal.edu.co](valopezmo@unal.edu.co)
