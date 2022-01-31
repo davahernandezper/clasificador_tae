@@ -39,21 +39,13 @@ Para terminar,se normalizan todos los datos excepto la variable de respuesta que
 Inicialmente se proponen tres modelos y como es un problema de clasificación de imágenes el mejor método a usar son las redes neuronales convolucionales. Para iniciar haremos tres modelos sin datos aumentados de los cuales 1 es un modelo denso y los otros dos son modelos convolucionales:
 
 ### Modelo denso:
-Este modelo tiene una capa de entrada que recibe los 22.500 pixeles, luego tiene dos capas densas con 200 neuronas cada una y finalmente la capa de salida, esta última capa debido al problema donde el resultado es si la personas lleva o no lleva lentes puestos tendrá únicamente una neurona de salida y usaremos la función sigmoid.
-
-![_config.yml]({{ site.baseurl }}/images/10_img.png)
-
+Este modelo tiene una capa de entrada que recibe los 22.500 pixeles, luego tiene dos capas densas con 200 neuronas cada una y finalmente la capa de salida, esta última capa debido al problema donde el resultado es si la personas lleva o no lleva lentes puestos tendrá únicamente una neurona de salida y usaremos la función sigmoid. Se usa esta función dado que sus valores de respuesta estan siempre entre 0 y 1.
 
 ### Modelo convolucional:
 Este modelo tiene tres pares de capas convolucionales los cuales pasaran por 32, 64 y 128 filtros, luego tendrá una capa densa con 150 neuronas y finalmente la capa de salida que cumple con las mismas condiciones que para el modelo denso.
 
-![_config.yml]({{ site.baseurl }}/images/11_img.png)
-
-
 ### Modelo convolucional 2:
 Este modelo tiene tres pares de capas convolucionales los cuales pasaran por 32, 64 y 128 filtros, luego tendrá un dropout cuya función es la de regularizar para reducir el sobreajuste de la red neuronal, continua con una capa densa con 150 neuronas y finalmente la capa de salida que cumple con las mismas condiciones que para los modelos anteriores.
-
-![_config.yml]({{ site.baseurl }}/images/12_img.png)
 
 
 ### Grafico de precisión y perdida:
@@ -72,6 +64,10 @@ Al mirar los gráficos de loss podemos observar que los datos de validación est
 - Modelo convolucional 2:
 
 ![_config.yml]({{ site.baseurl }}/images/cnn2.png)
+
+
+
+
 
 
 ## Modelos con datos aumentados
