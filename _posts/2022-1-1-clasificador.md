@@ -85,7 +85,7 @@ El comportamiento deseado se obtiene con el modelo convolucional en la grafica 4
 
 
 
+## Resultado conjunto de validacion [CMU Face Images Data Set](http://archive.ics.uci.edu/ml/datasets/cmu+face+images)
 
-## Modelos con datos aumentados, pero con muestra de validación diferente
-
-Ahora se usa una técnica diferente, es posible que los resultados anteriores se deba a que el conjunto de validación usado es demasiado diferente al conjunto de entrenamiento que se usa, por ejemplo, el conjunto de entrenamiento solo tiene una fotografía para cada persona mientras que el conjunto de validación tiene diferentes tomas de la misma persona en diferentes ángulos o con diferentes lentes, es probable que esto este confundiendo al modelo y por eso su dificultad al generalizar, por lo que se opta por usar el 20% de los datos de entrenamiento como conjunto de validación:
+Teniendo en cuenta los resultados anteriores, se decide evaluar el desempeño de los dos con mejor precisión y menor pérdida, estos son el modelo  denso sin datos aumentados y el modelo convolucional con datos aumentados, teniendo en cuenta el conjunto de imágenes compartidas para realizar la evaluacion del modelo (siendo este un conjunto de validación aparte del de prueba) 
+Los resultados se muestran a continuación: 
