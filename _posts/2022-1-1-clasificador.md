@@ -89,3 +89,22 @@ El comportamiento deseado se obtiene con el modelo convolucional en la grafica 4
 
 Teniendo en cuenta los resultados anteriores, se decide evaluar el desempeño de los dos con mejor precisión y menor pérdida, estos son el modelo  denso sin datos aumentados y el modelo convolucional con datos aumentados, teniendo en cuenta el conjunto de imágenes compartidas para realizar la evaluacion del modelo (siendo este un conjunto de validación aparte del de prueba) 
 Los resultados se muestran a continuación: 
+
+- El modelo denso presento una precision del 37%.
+- El modelo convolucional con datos aumentos presenta una precision del 78%.
+
+De esta manera el modelo seleccionado es el convolucional con datos aumentados pues este presenta un mejor desempeño en el conjunto de validación. De igual manera, en el mundo del reconocimiento facial un 22% puede hacer gran diferencia en procesos de seguridad de la información. La perdida de precision puede deberse a que en el conjunto de validacion (a diferencia del conjunto de entrenamiento y prueba) las imagenes no deben tener una reduccion de dimensiones sino que mas bien deben ser aumentadas. Otra gran diferencia es que el conjunto de validacion ya viene en una escala de grises, mientras que el conjunto de entrenamiento debe ser transformado en su escala de colores a gris.
+
+##Bibliografia
+
+-Bueno, J. (2021, enero). data-cleaning-glasses-no-glasses. Kaggle. Recuperado 25 de diciembre de 2021, de [https://www.kaggle.com/jorgebuenoperez/datacleaningglassesnoglasses?select=Images](https://www.kaggle.com/jorgebuenoperez/datacleaningglassesnoglasses?select=Images).
+
+-Heaton, J. (2020, 18 abril). Glasses or No Glasses. Kaggle. Recuperado 25 de diciembre de 2021, de [https://www.kaggle.com/jeffheaton/glasses-or-no-glasses](https://www.kaggle.com/jeffheaton/glasses-or-no-glasses).
+
+-Foro de GitHub. (2016, 3 octubre). flow_from_directory seems to find no images · Issue #3946 · keras-team/keras. GitHub. Recuperado 24 de diciembre de 2021, de [https://github.com/keras-team/keras/issues/3946](https://github.com/keras-team/keras/issues/3946).
+
+-Chaturvedi, S. (2019, 5 junio). Research gate. Research gate. Recuperado 1 de enero de 2022, de [https://www.researchgate.net/post/When_can_Validation_Accuracy_be_greater_than_Training_Accuracy_for_Deep_Learning_Models](https://www.researchgate.net/post/When_can_Validation_Accuracy_be_greater_than_Training_Accuracy_for_Deep_Learning_Models).
+
+-Zhang, K. (2020, 26 julio). Redes-Neuronales. GitHub. Recuperado 2 de enero de 2022, de [https://github.com/Codificados/Redes-Neuronales/blob/master/GenerarDatos.py](https://github.com/Codificados/Redes-Neuronales/blob/master/GenerarDatos.py).
+
+-Introduction to deep learning. (s. f.). pythonprogramming.net. Recuperado 2 de enero de 2022, de [https://pythonprogramming.net/introduction-deep-learning-python-tensorflow-keras/](https://pythonprogramming.net/introduction-deep-learning-python-tensorflow-keras/).
