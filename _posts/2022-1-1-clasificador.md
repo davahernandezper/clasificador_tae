@@ -44,39 +44,23 @@ Este modelo tiene una capa de entrada que recibe los 22.500 pixeles, luego tiene
 ### Modelo convolucional:
 Este modelo tiene tres pares de capas convolucionales los cuales pasaran por 32, 64 y 128 filtros, luego tendrá una capa densa con 150 neuronas y finalmente la capa de salida que cumple con las mismas condiciones que para el modelo denso.
 
-### Modelo convolucional 2:
-Este modelo tiene tres pares de capas convolucionales los cuales pasaran por 32, 64 y 128 filtros, luego tendrá un dropout cuya función es la de regularizar para reducir el sobreajuste de la red neuronal, continua con una capa densa con 150 neuronas y finalmente la capa de salida que cumple con las mismas condiciones que para los modelos anteriores.
 
 
-### Grafico de precisión y perdida:
-Para cada uno de los modelos anteriores podemos observar en la precisión que los datos de entrenamiento están creciendo demasiado rápido y llegando al valor 1, lo cual indica que estos modelos no son capaces de generalizar y que se aprenden los datos de memoria, esto se comprueba con la precisión de los datos de validación que en lugar de crecer antes están con tendencia hacia el 0.
+### Gráfico de precisión y perdida:
+En la gráfica 1 para el modelo denso y en la grafica 2 para el modelo convolucional, podemos observar que la precision para ambos conjuntos es creciente con cada paso de la red. En la grafica 1 para el modelo denso podemos observar un comportamiento fluctuante tanto en presicion como en perdida, en la precision luego del paso 70 se alcanza el valor de 1 para el conjunto de entrenamiento lo que podria indicar un sobreajuste.
 
-Al mirar los gráficos de loss podemos observar que los datos de validación están creciendo en lugar de tener una tendencia hacia el cero, esto último nos comprueba que estos modelos no son capaces de generalizar y por lo tanto no son útiles en este ejercicio. Esto a pesar de que los datos de validación 'mejoraron' para los modelos convolucionales.
+Para el modelo convolusional en la grafica 2, se alcanza identificar que la precision es igual a 1 en muy pocos pasos, lo que podria indicar que la red se esta aprendiendo los datos de memoria y que por ello es que necesita menos pasos para su aprendizaje, tambien, lo podemos confirmar con la perdida dado que para el conjunto de entrenamiento el error tiende a cero a medida que la red da mas pasos pero, el error del conjunto de validacion empieza a ser creciente luego de los 40 pasos.
 
-- Modelo denso
-
-![_config.yml]({{ site.baseurl }}/images/denso.png)
-
-- Modelo convolucional:
-
-![_config.yml]({{ site.baseurl }}/images/cnn.png)
-
-- Modelo convolucional 2:
-
-![_config.yml]({{ site.baseurl }}/images/cnn2.png)
+![_config.yml]({{ site.baseurl }}/images/grafico_1.jpeg)
 
 
-
+![_config.yml]({{ site.baseurl }}/images/grafico_2.jpeg)
 
 
 
 ## Modelos con datos aumentados
 
-Ahora se proponen los mismos tres modelos, pero esta vez con datos aumentados, esto significa que se le realizaran modificaciones a las imágenes del conjunto de entrenamiento, tales como: rotaciones, inclinaciones, acercamientos, desplazamientos verticales y desplazamientos horizontales. Para esto usamos el siguiente código:
-
-![_config.yml]({{ site.baseurl }}/images/13_img.png)
-
-![_config.yml]({{ site.baseurl }}/images/14_img.png)
+Ahora se proponen los mismos dos modelos, pero esta vez con datos aumentados, esto significa que se le realizaran modificaciones a las imágenes del conjunto de entrenamiento, tales como: rotaciones, inclinaciones, acercamientos, desplazamientos verticales y desplazamientos horizontales. 
 
 las imagenes del conjunto de entrenamiento se ven como sigue:
 
