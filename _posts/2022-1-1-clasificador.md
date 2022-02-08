@@ -33,20 +33,32 @@ Para el modelo, los datos fueron obtenidos de un problema existente en kaggle (B
 4.Como los datos están organizados por categoría se mezcla de forma aleatoria para así, evitar introducir al modelo cualquier patrón de comportamiento.
 Para terminar, se normalizan todos los datos excepto la variable de respuesta que toma valores únicamente de 0 y 1.
 
+## Modelos
+Como es un problema de clasificación de imágenes el mejor método a usar son las redes neuronales convolucionales, pero de igual manera es una buena idea no solo validar con esta técnica. Para el problema usaremos los siguientes modelos:
+
+-Red neural artificial que llamaremos modelo densos Se decide usarla debido a que cada una de sus neuronas se considera como una regresión logística con la capacidad de aprender cualquier función no lineal. Una de las desventajas más grandes que se tiene con este método es que puede aumentar el número de parámetros dependiendo del tamaño de la imagen y que puede llegar a perder características espaciales de una imagen (Pai, 2020).
 
 
-## Modelos sin datos aumentados
+-red neuronal convolucional que llamaremos modelo convolucional: Estos modelos se escogen debido a que tienen la capacidad de aprender filtros automáticamente sin la necesidad de tenerlo que especificar o aclarar y en comparación con las ANN, estos modelos capturan las características espaciales de una imagen por lo que es capaz de crear una relación entre los pixeles de una imagen (Pai, 2020).
 
-Inicialmente se proponen tres modelos y como es un problema de clasificación de imágenes el mejor método a usar son las redes neuronales convolucionales. Para iniciar haremos tres modelos sin datos aumentados de los cuales 1 es un modelo denso y los otros dos son modelos convolucionales:
+Una de las desventajas de este modelo es que requiere muchas entradas de datos para lograr una alta precisión (Meel, 2021).
 
-### Modelo denso:
+
+Para evaluar el desempeño de cada uno de los modelos se usarán los gráficos de precisión y perdida, además se evalúa cada modelo con dos técnicas diferentes para el tratamiento de las imágenes:
+
+### Modelos sin datos aumentados
+Para modelos sin datos aumentados se quiere decir que el conjunto de imágenes de entrenamiento no tiene ninguna transformación por lo que se verán como:
+
+![_config.yml]({{ site.baseurl }}/images/15_img.png)
+
+#### Modelo denso:
 Este modelo tiene una capa de entrada que recibe los 22.500 pixeles, luego tiene dos capas densas con 200 neuronas cada una y finalmente la capa de salida, esta última capa debido al problema donde el resultado es si la personas lleva o no lleva lentes puestos tendrá únicamente una neurona de salida y usaremos la función Sigmoid. Se usa esta función dado que sus valores de respuesta están siempre entre 0 y 1.
 
-### Modelo convolucional:
+#### Modelo convolucional:
 Este modelo tiene tres pares de capas convolucionales los cuales pasaran por 32, 64 y 128 filtros, luego tendrá una capa densa con 150 neuronas y finalmente la capa de salida que cumple con las mismas condiciones que para el modelo denso.
 
 
-### Gráfico de precisión y perdida:
+#### Gráfico de precisión y perdida:
 En la gráfica 1 para el modelo denso y en la gráfica 2 para el modelo convolucional, podemos observar que la precisión para ambos conjuntos es creciente con cada paso de la red. En la gráfica 1 para el modelo denso podemos observar un comportamiento fluctuante tanto en precisión como en perdida, en la precisión luego del paso 70 se alcanza el valor de 1 para el conjunto de entrenamiento lo que podría indicar un sobreajuste.
 
 Para el modelo convolucional en la gráfica 2, se alcanza identificar que la precisión es igual a 1 en muy pocos pasos, lo que podría indicar que la red se está aprendiendo los datos de memoria y que por ello es que necesita menos pasos para su aprendizaje, también, lo podemos confirmar con la perdida dado que para el conjunto de entrenamiento el error tiende a cero a medida que la red da más pasos pero, el error del conjunto de validación empieza a ser creciente luego de los 40 pasos.
@@ -58,7 +70,7 @@ Para el modelo convolucional en la gráfica 2, se alcanza identificar que la pre
 
 
 
-## Modelos con datos aumentados
+### Modelos con datos aumentados
 
 Ahora se proponen los mismos dos modelos, pero esta vez con datos aumentados, esto significa que se les realizaran modificaciones a las imágenes del conjunto de entrenamiento, tales como: rotaciones, inclinaciones, acercamientos, desplazamientos verticales y desplazamientos horizontales. 
 
@@ -111,3 +123,7 @@ De esta manera el modelo seleccionado es el convolucional con datos aumentados p
 -Zhang, K. (2020, 26 julio). Redes-Neuronales. GitHub. Recuperado 2 de enero de 2022, de [https://github.com/Codificados/Redes-Neuronales/blob/master/GenerarDatos.py](https://github.com/Codificados/Redes-Neuronales/blob/master/GenerarDatos.py).
 
 -Introduction to deep learning. (s. f.). pythonprogramming.net. Recuperado 2 de enero de 2022, de [https://pythonprogramming.net/introduction-deep-learning-python-tensorflow-keras/](https://pythonprogramming.net/introduction-deep-learning-python-tensorflow-keras/).
+
+-Pai, A. (2020, 17 febrero). ANN vs CNN vs RNN | Types of Neural Networks. Analytics Vidhya. Recuperado 7 de febrero de 2022, de [https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/](https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/).
+
+-Meel, V. (2021, 1 febrero). ANN and CNN: Analyzing Differences and Similarities. Viso.Ai. Recuperado 7 de febrero de 2022, de [https://viso.ai/deep-learning/ann-and-cnn-analyzing-differences-and-similarities/](https://viso.ai/deep-learning/ann-and-cnn-analyzing-differences-and-similarities/).
