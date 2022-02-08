@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clasificador
+title: ''
 published: true
 ---
 ## Introducción
