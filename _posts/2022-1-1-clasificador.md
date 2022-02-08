@@ -124,6 +124,6 @@ De esta manera el modelo seleccionado es el convolucional con datos aumentados p
 
 -Introduction to deep learning. (s. f.). pythonprogramming.net. Recuperado 2 de enero de 2022, de [https://pythonprogramming.net/introduction-deep-learning-python-tensorflow-keras/](https://pythonprogramming.net/introduction-deep-learning-python-tensorflow-keras/).
 
--Pai, A. (2020, 17 febrero). ANN vs CNN vs RNN | Types of Neural Networks. Analytics Vidhya. Recuperado 7 de febrero de 2022, de [https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/](https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/).
+-Pai, A. (2020, 17 febrero). CNN vs. RNN vs. ANN – Analyzing 3 Types of Neural Networks in Deep Learning. Analytics Vidhya. Recuperado 7 de febrero de 2022, de [https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/](https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/).
 
 -Meel, V. (2021, 1 febrero). ANN and CNN: Analyzing Differences and Similarities. Viso.Ai. Recuperado 7 de febrero de 2022, de [https://viso.ai/deep-learning/ann-and-cnn-analyzing-differences-and-similarities/](https://viso.ai/deep-learning/ann-and-cnn-analyzing-differences-and-similarities/).
