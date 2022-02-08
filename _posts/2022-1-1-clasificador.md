@@ -34,12 +34,12 @@ Para el modelo, los datos fueron obtenidos de un problema existente en kaggle (B
 Para terminar, se normalizan todos los datos excepto la variable de respuesta que toma valores únicamente de 0 y 1.
 
 ## Modelos
-Como es un problema de clasificación de imágenes el mejor método a usar son las redes neuronales convolucionales, pero de igual manera es una buena idea no solo validar con esta técnica. Para el problema usaremos los siguientes modelos:
+Como es un problema de clasificación de imágenes el mejor método a usar son las redes neuronales convolucionales, pero de igual manera es una buena idea no solo validar con esta técnica. Para el problema se usaron los siguientes modelos:
 
--Red neural artificial que llamaremos modelo densos Se decide usarla debido a que cada una de sus neuronas se considera como una regresión logística con la capacidad de aprender cualquier función no lineal. Una de las desventajas más grandes que se tiene con este método es que puede aumentar el número de parámetros dependiendo del tamaño de la imagen y que puede llegar a perder características espaciales de una imagen (Pai, 2020).
+-Red neural artificial (ANN) que se llamará modelo denso: Se decide usarla debido a que cada una de sus neuronas se considera como una regresión logística con la capacidad de aprender cualquier función no lineal. Una de las desventajas más grandes que se tiene con este método es que puede aumentar el número de parámetros dependiendo del tamaño de la imagen y que puede llegar a perder características espaciales de una imagen (Pai, 2020).
 
 
--red neuronal convolucional que llamaremos modelo convolucional: Estos modelos se escogen debido a que tienen la capacidad de aprender filtros automáticamente sin la necesidad de tenerlo que especificar o aclarar y en comparación con las ANN, estos modelos capturan las características espaciales de una imagen por lo que es capaz de crear una relación entre los pixeles de una imagen (Pai, 2020).
+-Red neuronal convolucional (CNN) que llamaremos modelo convolucional: Estos modelos se escogen debido a que tienen la capacidad de aprender filtros automáticamente sin la necesidad de tenerlo que especificar o aclarar y en comparación con las ANN, estos modelos capturan las características espaciales de una imagen por lo que es capaz de crear una relación entre los pixeles de una imagen (Pai, 2020).
 
 Una de las desventajas de este modelo es que requiere muchas entradas de datos para lograr una alta precisión (Meel, 2021).
 
